@@ -14,7 +14,7 @@ func InitDB() {
 	var err error
 	DBConn, err = gorm.Open(sqlite.Open("confessions.db"))
 	if err != nil {
-		panic("Cannot connect to Database")
+		panic("")
 	}
 	fmt.Println("Connected to DB")
 	DBConn.AutoMigrate(&models.Confession{})
